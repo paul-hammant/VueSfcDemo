@@ -1,8 +1,8 @@
 <template>
-  <div id="display">
+  <div>
       <div id="displayText">
         <div id = "leftOf">{{displayValue}}</div>
-        <div id = "blinker"> <Blinker /> </div>
+        <div> <Blinker /> </div>
       </div>
       <div id="subText"><p>{{subDisplayValue}}</p></div>
   </div>
@@ -10,7 +10,6 @@
 
 <script>
 import Blinker from "./Blinker.vue";
-import Velocity from "velocity-animate";
 
 export default {
   name: 'display',
@@ -20,17 +19,7 @@ export default {
   },
   components:{
     Blinker
-  },
-  mounted:function(){
-    this.onLoady()
-  },
-  methods: {
-    onLoady: function() {
-      Velocity(document.getElementById("blinker"), {opacity: 0}, {loop: true});
-    }
   }
-  
-
 }
 </script>
 

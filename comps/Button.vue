@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Velocity from "velocity-animate";
+import Velocity from "https://unpkg.com/velocity-animate@1.5.2/velocity.min.js";
 
 export default {
   name: 'vuebutton',
@@ -40,7 +40,7 @@ export default {
 <style>
 #vuebutton {
   margin: 0px;
-  height: 100px;
+  height: 95px;
   box-sizing: border-box;
   float: left;
 

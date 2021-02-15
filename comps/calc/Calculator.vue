@@ -12,7 +12,7 @@
 
 <script>
 import Display from './Display.vue'
-import Button from './Button.vue'
+import Button from '../Button.vue'
 
 export default {
   data: function () {

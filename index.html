@@ -1,0 +1,36 @@
+<html>
+
+<div>
+  <div id="app"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js" integrity="sha512-cWbIzX5dm6Uyc6jg+DmJTWherzF5usoVXN/3MYggEQhsgfOJdfIPAvz5Ktprf4Gx2HoxVUqMIVDuyBp5PQ1Hwg==" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+  <script>
+    const options = {
+      moduleCache: {
+        vue: Vue
+      },
+      async getFile(url) {
+        const res = await fetch(url);
+        if ( !res.ok )
+          throw Object.assign(new Error(url+' '+res.statusText), { res });
+        return await res.text();
+      },
+      addStyle(textContent) {
+        const style = Object.assign(document.createElement('style'), { textContent });
+        const ref = document.head.getElementsByTagName('style')[0] || null;
+        document.head.insertBefore(style, ref);
+      },
+    }
+    const { loadModule } = window['vue3-sfc-loader'];
+    const app = Vue.createApp({
+      components: {
+        'my-component': Vue.defineAsyncComponent( () => loadModule('comps/calc/Calculator.vue', options) )
+      },
+      template: '<my-component></my-component>'
+    });
+    app.mount('#app');
+  </script>
+</div>
+
+</html>

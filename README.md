@@ -18,18 +18,27 @@ Live Demo: [https://paul-hammant.github.io/VueSfcDemo](https://paul-hammant.gith
 
 ## Changes to get this working with document.getElementById
 
-See the diff: [](https://github.com/paul-hammant/VueSfcDemo/commit/)
+See the diff: [a0aa20e](https://github.com/paul-hammant/VueSfcDemo/commit/a0aa20e39ba82714d2264ab3efdd4a0a08443a1a) (note Blinker was moved, but Git thinks Added/Deleted - [a feature not a bug](https://stackoverflow.com/questions/433111/how-to-make-git-mark-a-deleted-and-a-new-file-as-a-file-move))
 
 * velocity-animate referenced in-situ on unpkg rather than from `node_modules/`
 
 ## Other changes I made
 
 * Changed from a `document.getElementById()` DOM traversl to a canonicl Vue way (refs)
-* component directory reorg: Button feels reusable outside aCalculator so it's loaded as `../Button.vue` now
+* Component directory reorg: Button feels reusable outside aCalculator so it's loaded as `../Button.vue` now
 * Moved velocity-animate logic into the Blinker component from the Display component
 
 ## TODO 
 
-* More refactoring.
+* More refactoring. Maybe make Display take some behaviors from Calculator
 * Work out how to parameterize velocity-animate version (1.5.2) that's currently hard coded in two places  
 * Add Tests
+* Work out if there's a one-liner way of injecting a Vue SFC component into a page
+  * I wish [HTML imports](https://caniuse.com/imports) was a thing
+    
+## What the Vue community needs
+
+* A 'component marketplace' that is all about SFC components. The .NET community gets this right:
+  * WinForms: [https://marketplace.visualstudio.com/search?term=winforms&target=VS](https://marketplace.visualstudio.com/search?term=winforms&target=VS)
+  * ASP.NET MVC: [https://marketplace.visualstudio.com/search?term=MVC&target=VS](https://marketplace.visualstudio.com/search?term=MVC&target=VS)
+  * WPF: https://marketplace.visualstudio.com/search?term=wpf&target=VS

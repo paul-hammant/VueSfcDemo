@@ -36,9 +36,4 @@ See the diff: [a0aa20e](https://github.com/paul-hammant/VueSfcDemo/commit/a0aa20
 * Work out if there's a one-liner way of injecting a Vue SFC component into a page
   * I wish [HTML imports](https://caniuse.com/imports) was a thing
     
-## What the Vue community needs
-
-* A 'component marketplace' that is all about SFC components. The .NET community gets this right:
-  * WinForms: [https://marketplace.visualstudio.com/search?term=winforms&target=VS](https://marketplace.visualstudio.com/search?term=winforms&target=VS)
-  * ASP.NET MVC: [https://marketplace.visualstudio.com/search?term=MVC&target=VS](https://marketplace.visualstudio.com/search?term=MVC&target=VS)
-  * WPF: https://marketplace.visualstudio.com/search?term=wpf&target=VS
+See also: [https://paulhammant.com/2021/02/16/buildless-sfc-vuejs-applications](https://paulhammant.com/2021/02/16/buildless-sfc-vuejs-applications/)
